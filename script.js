@@ -8,8 +8,8 @@ function validateForm() {
         return false;
     }
 
-    // Mistake: password length validation is not correct
-    if (password.length > 6) {
+    // Corrected: Validate if password length is less than 6 characters
+    if (password.length < 6) {
         errorMessage.innerText = "Password must be at least 6 characters!";
         return false;
     }
